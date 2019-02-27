@@ -1,0 +1,475 @@
+*{
+  -webkit-user-select: none;/*禁用手机浏览器的用户选择功能 */
+  -moz-user-select: none;
+  -ms-user-select:none; /*IE10*/
+  user-select:none;
+  -webkit-touch-callout: none;
+  -moz-touch-callout:none;
+  -ms-touch-callout:none;
+  touch-callout:none;
+}
+input,textarea {
+  -webkit-user-select:auto; /*webkit浏览器*/
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+  //border:none;
+}
+img {//禁用ios长按图片保存
+    pointer-event:none!important;
+    -webkit-touch-callout: none;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.ofh{
+    overflow: hidden;
+}
+#app a:hover{
+    text-decoration: none;
+}
+.router-link-active {
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+div{
+    box-sizing: border-box;
+}
+/*iPhoneX的适配*/
+@media only screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  /*增加头部适配层：遮掉上滑时，刘海两侧露出的页面*/
+  body:before {content: '';position: fixed;top: 0;left: 0;width: 100%;height: 24px;background-color: #fff;z-index: 9998;}
+  .header {
+    box-shadow:0 0 0 #fff!important;
+    border-bottom: 1.5px solid #e6e3e3;
+  }
+}
+/*设置主页*/
+@base-size:75rem;
+#setting{
+    padding-top: 2.1rem;
+    background: #fff;
+    min-height: 100vh;
+    width: 100vw;
+}
+.mui-icon {
+    font-size: 2.4rem;
+}
+.mint-switch {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: static;
+    display: inline-block;
+}
+.mui-navbar-inner .icon-smart_socket2:before{
+    font-size: 3rem;
+}
+.setting_content{
+    padding-top: 100/@base-size;
+    p{
+        font-size: 1.3rem;
+    }
+    .switch_img{
+        width: 130/@base-size;
+        height:130/@base-size;
+        display: inline-block;
+        background: url("../../img/settings/guanbi@3x.png");
+        background-size: contain;
+    }
+    .switch_on{
+        background: url("../../img/settings/kaiqi@3x.png");
+        background-size: contain;
+    }
+}
+
+.setting_content li{
+    width: 33.1%;
+    text-align: center;
+    margin-top: 0;
+    height: 3.8rem;
+    img{
+        width: 130/@base-size;
+        height:auto;
+    }
+    .icon-arrow_right{
+        margin-left: 15/@base-size;
+        vertical-align: middle;
+        img{
+            width: 10/@base-size;
+            margin-bottom: -2/@base-size;
+        }
+    }
+}
+
+.setting_content li p{
+    text-align: center;
+    padding-bottom: 90/@base-size;
+    font-size: 24/@base-size;
+    line-height: 30/@base-size;
+    width: 120/@base-size;
+    margin: 26/@base-size auto;
+    margin-bottom: 0;
+    a{
+        color: #313131;
+    }
+    a:hover {
+        color: #ff9b1a;
+    }
+}
+.function_btn{
+    padding-bottom: 0;
+    .title{
+        font-size: 24/@base-size;
+        color:#898989;
+        font-weight: 600;
+    }
+}
+.socket_control_btn{
+    width: 50%;
+    padding:0 1rem;
+    height: 120/@base-size;
+    border-right: 1px solid #e2e2e2;
+}
+.power_analy_btn{
+    padding:0 1rem;
+    width: 50%;
+    p{
+        vertical-align: middle;
+        margin-bottom: 0;
+    }
+    a{
+        font-size: 24/@base-size;
+        color: #898989;
+    }
+    img{
+        margin-top: 30/@base-size;
+        width: 120/@base-size;
+        height: 50/@base-size;
+    }
+}
+.function_btn .icon-smart_socket2:before {
+    font-size: 4rem;
+    line-height: 2rem;
+    vertical-align: middle;
+}
+
+/*设备设置页*/
+.setting_device_wrap{
+    background: #f5f5f5;
+    padding-top: 20/@base-size;
+}
+.setting_device {
+    padding:25/@base-size 0 0.23rem;
+    background: #fff;
+}
+.mui-navigate-right{
+    position: relative;
+    #device_name{
+        margin-right: 36/@base-size;
+    }
+    .room_ver_wrap{
+        vertical-align: middle;
+        #room_ver{
+            margin-right: 0.25rem;
+            vertical-align: middle;
+        }
+        .arrow{
+            vertical-align: middle;
+        }
+    }
+}
+.mui-table-view-cell {
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    margin: 0;
+    padding: 20/@base-size 25/@base-size;
+    text-align: left;
+    position: relative;
+    background: #fff;
+    font-size: 30/@base-size;
+    color: #313131;
+    padding: 0 20/@base-size;
+    padding-top: 25/@base-size;
+    padding-bottom: 25/@base-size;
+    .arrow{
+        position: absolute;
+        right:0;
+        top:12/@base-size;
+        width: 10/@base-size;
+    }
+    .task_remind{
+        line-height: 50px;
+        padding-right: 2/@base-size!important;
+        overflow: visible!important;
+        .switch_sec{
+            top: -0.35rem;
+        }
+        .switch-wrap{
+            margin-top: 0.656rem;
+            margin-bottom: 0;
+        }
+    }
+}
+.device_name_li .arrow{
+    top: 0.1rem;
+}
+.device_name_li>a{
+    height: 40/@base-size;
+    line-height: 40/@base-size;
+}
+.mui-table-view-cell>a:not(.mui-btn) {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    padding: 0;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: inherit;
+    z-index: 1;
+}
+.device_icon_wrap{
+    position: absolute;
+    right: 0;
+    top:24/@base-size;
+    vertical-align: middle;
+    .arrow{
+        position: absolute;
+        right: 20/@base-size;
+        bottom: 3/@base-size;
+    }
+    img{
+        vertical-align: middle;
+    }
+    #device_img{
+        width: 48/@base-size;
+        vertical-align: middle;
+        margin-right: 42/@base-size;
+        margin-bottom: -4/@base-size;
+    }
+}
+//房间picker
+.picker_wrap{
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(128, 128, 128, 0.5);
+    z-index: 999;
+    //display: none;
+}
+.picker_alert{
+    border-top: 1px solid gray;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    bottom:0;
+    height:0;
+    transition:height 0.3s;
+    .picker_header{
+        height: 90px;
+        background: #f5f5f5;
+        line-height: 90px;
+        span{
+            margin:0 12/@base-size;
+            padding:0 6/@base-size;
+            text-align: center;
+            font-size: 30/@base-size;
+            color: #157efb;
+        }
+        .select_room{
+            font-size: 34/@base-size;
+            display: inline-block;
+            margin-top:0 12/@base-size;
+            color: #000;
+        }
+    }
+}
+
+//设备图标选择
+.device_icon_sec{
+    li{
+        width: 33.33%;
+        text-align: center;
+        padding-bottom: 25/@base-size;
+        img{
+            width: 130/@base-size;
+        }
+        .icon_img{
+            width: 130/@base-size;
+            height: 130/@base-size;
+            background: url("../../img/settings/paicha_icon@3x.png");
+        }
+    }
+}
+
+//设置设备名称
+.set_device_name {
+    text-align: center;
+    input {
+        width: 92%;
+        height: 90/@base-size;
+        font-size: 30/@base-size;
+        text-indent: 20/@base-size;
+        border-radius: 8/@base-size;
+        border: 1px solid #ccc;
+        color: #313131;
+        caret-color:#ff9b1a;
+        -webkit-appearance:none;
+    }
+    input:focus{
+        color: #313131;
+    }
+    ::-webkit-input-placeholder { /* WebKit browsers */
+        color:    #bfbfbf;
+    }
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color:    #bfbfbf;
+    }
+    ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color:    #bfbfbf;
+    }
+    :-ms-input-placeholder { /* Internet Explorer 10+ */
+        color:    #bfbfbf;
+    }
+    .save_name {
+        border-radius: 8/@base-size;
+        display: inline-block;
+        background: #ccc;
+        font-size: 30/@base-size;
+        margin-top: 40/@base-size;
+        color: #fff;
+        width: 183/@base-size;
+        height: 50/@base-size;
+        line-height: 50/@base-size;
+    }
+}
+.firmware_version{
+    position: relative;
+    .mi_badge{
+        display: none;
+        margin-left: -6/@base-size;
+        position: relative;
+        top: -20/@base-size;
+        background-color: #ff9b1a;
+        border-radius: 14/@base-size;
+        left: 6/@base-size;
+        font-size: 21/@base-size;
+        padding:1.2/@base-size 6/@base-size;
+        color: #fff;
+    }
+    .updateShow{
+        display: inline-block;
+    }
+}
+#firmware_version{
+    padding-top: 28/@base-size;
+    margin-top: -28/@base-size;
+    padding-bottom: .37333333rem;
+    img{
+        position: static;
+        vertical-align: middle;
+    }
+    .rom_version_wrap{
+        vertical-align: middle;
+    }
+    .rom_version{
+        vertical-align: middle;
+        margin-top: 1px;
+        margin-right: 5/@base-size;
+        display: inline-block;
+    }
+}
+.device_infor_sec{
+    background: #f5f5f5;
+    p{
+        text-align: left;
+        padding-left: 20/@base-size;
+        margin-bottom: 20/@base-size;
+        padding-top: 50/@base-size;
+        color: #313131;
+    }
+    .device_infor{
+        padding-top: 50/@base-size;
+        padding-bottom: 0.3rem;
+        background: #fff;
+        margin-top: 0;
+        .mui-table-view-cell{
+            padding-top: 0;
+            padding-bottom: 50/@base-size;
+        }
+    }
+    .device_infor li .detail{
+    }
+    .delete_device {
+        text-align: center;
+        .delete_btn {
+            color: red;
+            display: inline-block;
+            width: 234/@base-size;
+            height: 60/@base-size;
+            margin-top: 130/@base-size;
+        }
+    }
+
+}
+
+//公共部分confirm toast样式
+.confirm_toast_wrap,.romUpdate_confirm_toast_wrap{
+    position: fixed;
+    top: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    display: none;
+    z-index: 9999;
+    .confirm_toast{
+        box-sizing: border-box;
+        width: 550/@base-size;
+        height: 350/@base-size;
+        background: rgba(255, 255, 255, 1);
+        border-radius: 19/@base-size;
+        position: absolute;
+        top: -110/@base-size;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        font-size: 34px;
+        color: #313131;
+        .confirm_content{
+            padding: 80/@base-size 40/@base-size;
+            text-align: center;
+            height: 258/@base-size;
+            box-sizing: border-box;
+        }
+        .sure{
+            color: red;
+        }
+        .confirm_footer{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            border-top: 1px solid #ccc;
+            line-height:80/@base-size;
+            a{
+                display: inline-block;
+                width: 48%;
+            }
+            .cancel{
+                border-right: 1px solid #ccc;
+            }
+        }
+    }
+}
+.romUpdate_confirm_toast_wrap{
+  display: inherit;
+}
+

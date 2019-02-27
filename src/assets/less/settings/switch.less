@@ -1,0 +1,116 @@
+*{
+  -webkit-user-select: none;/*禁用手机浏览器的用户选择功能 */
+  -moz-user-select: none;
+  -webkit-touch-callout: none;
+  -ms-user-select:none; /*IE10*/
+  user-select:none;
+}
+input,textarea {
+  -webkit-user-select:auto; /*webkit浏览器*/
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.ofh{
+    overflow: hidden;
+}
+#app a:hover{
+    text-decoration: none;
+}
+.router-link-active {
+    text-decoration: none;
+}
+a{
+    text-decorationnv: none;
+}
+div{
+    box-sizing: border-box;
+}
+
+//插座总开关样式
+@r:75rem;//px转rem
+.switch_sec{
+    position: absolute;
+    font-size: 24/@r;
+    color: #898989;
+    right:0;
+}
+.switch-wrap {
+
+    position: relative;
+    margin: 50/@r auto;
+    width: 120/@r;
+    height: 40/@r;
+    font: 14px/1.5 Arial, Sans-Serif;
+}
+.switch input {
+    position: absolute;
+    left:0;
+    top: -60/@r;
+    width: 0;
+    border:none;
+}
+.switch input:before {
+    content: '';
+    display: inline-block;
+    position: relative;
+    border: 1px solid #898989;
+    box-shadow: 0 0 1px 1px #ececf3;
+    cursor: pointer;
+    border-radius: 0.4rem;
+    box-sizing: border-box;
+    background: #fff;
+    margin-top: 0.4rem;
+    width: 1.6rem;
+    height: 0.8rem;
+}
+.switch input:after {
+    content: '';
+    position: absolute;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-radius: 50%;
+    background-color: #898989;
+    top: 0.5rem;
+    left: 0.15rem;
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+}
+.switch_sec .mint-switch-active::after{
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: #ff9b1a;
+    border-radius: 50%;
+    transform: translateX(0.7rem);
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+}
+.switch .mint-switch-active:before {
+    border: 1px solid #ff9b1a;
+}
+
+.switch .mint_switch_active::after {
+    width: 0.6rem;
+    height: 0.6rem;
+    background-color: #ff9b1a;
+    border-radius: 50%;
+    transform: translateX(0.7rem);
+    -webkit-transition: -webkit-transform .3s;
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+}
+
+.switch .mint_switch_active:before {
+    border: 1px solid #ff9b1a;
+}
